@@ -20,7 +20,7 @@ class PageTitle extends StatelessWidget {
               SizedBox(
                 height: 10,
               ),
-              Text('Classify this transaction into a particular categori',
+              Text('Classify this transaction into a particular category',
                   style: TextStyle(fontSize: 16, color: Colors.white))
             ],
           ),
