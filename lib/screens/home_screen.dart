@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:disenos/widgets/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -6,7 +7,10 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Stack(children: const [Background(), _HomeBody()]));
+    return Scaffold(
+      body: Stack(children: const [Background(), _HomeBody()]),
+      bottomNavigationBar: const CustomBottomNavigation(),
+    );
   }
 }
 
@@ -17,6 +21,9 @@ class _HomeBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const PageTitle();
+    return SingleChildScrollView(
+        child: Column(
+      children: const [PageTitle(), CardTable()],
+    ));
   }
 }
